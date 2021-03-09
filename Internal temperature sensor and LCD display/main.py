@@ -3,7 +3,7 @@ import machine
 from machine import I2C
 from lcd_api import LcdApi
 from pico_i2c_lcd import I2cLcd
-I2C_ADDR     = 0x27 #adres wyświetlacza z pliku pico_i2c_lcd_test
+I2C_ADDR     = 0x27 #adres wyświetlacza z programu scan.py
 I2C_NUM_ROWS = 2 #wiersze wyświetlacza
 I2C_NUM_COLS = 16 #kolumny wyświetlacza
 
@@ -22,4 +22,3 @@ while True:
     lcd.putstr('Temp :') #Wypisywanie napisu "Temp :" od początku wyświetlacza 1 rzędu wyświetlacza
     lcd.move_to(7,0)
     lcd.putstr(str(t)+" C") #wypisywanie wartości temperatury + "C" od 7 pola 1 rzędu wyświetlacza
-    
